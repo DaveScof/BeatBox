@@ -10,14 +10,24 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.qenetech.beatbox.model.BeatBox;
+
 /**
  * Created by davescof on 3/27/17.
  */
 
 public class BeatBoxFragment extends Fragment {
 
+    private BeatBox mBeatBox;
+
     public static BeatBoxFragment newInstance (){
         return new BeatBoxFragment();
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mBeatBox = new BeatBox(getActivity());
     }
 
     @Nullable
