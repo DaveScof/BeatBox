@@ -7,6 +7,15 @@ package com.qenetech.beatbox.model;
 public class Sound {
     private String mAssetPath;
     private String mName;
+    private Integer soundID;
+
+    public Integer getSoundID() {
+        return soundID;
+    }
+
+    public void setSoundID(Integer soundID) {
+        this.soundID = soundID;
+    }
 
     public Sound (String assetPath){
         mAssetPath = assetPath;
